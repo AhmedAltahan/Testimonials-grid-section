@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(210, 46%, 95%);
+    font-size: 14px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.container {
+    max-width: 1100px ;
+    margin: 20px auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto ;
+    grid-template-rows: auto auto;
+    column-gap: 25px;
+    row-gap: 20px;
+    margin: 0 40px;
+}
+
+.cards {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.info img {
+    border-radius: 50%;
+    border: 2px solid  hsl(0, 0%, 100% , 0.7);
+    width: 40px;
+    height: 40px;
+}
+
+.info {
+    margin: 20px 0 15px 20px ;
+    display: flex;
+}
+
+.info .paragrapgh {
+    margin-left: -10px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.cards p {
+    margin: 0 25px 10px 25px;
+
+}
+
+.cards > p {
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+}
+
+.cards > p.qoute {
+    color: hsl(0, 0%, 100% , 0.7);
+    font-weight: 500;
+
+}
+
+.paragrapgh p {
+    color: hsl(0, 0%, 100% , 0.5);
+    font-weight: 500;
+
+}
+
+.paragrapgh p.bold {
+    color: hsl(0, 0%, 100%);
+    font-weight: 600;
+
+}
+
+.card1 {
+    grid-column: 1 / 3;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 85% 0 ;
+}
+
+.card2 {
+    grid-column: 3/4;
+    background-color: hsl(217, 19%, 35%);
+
+}
+
+.card3 {
+    grid-column: 4/5;
+    grid-row: 1/3;
+    background-color: hsl(0, 0%, 100%);
+
+}
+
+.card3 p {
+    color: rgba(78, 71, 71, 0.611);
+}
+
+.card3 > p {
+    color: black;
+
+}
+
+.card3 p.bold {
+    color: black;
+}
+
+.card3 p.qoute {
+    color: rgba(78, 71, 71, 0.611);
+}
+
+.card4 {
+    grid-column: 1/2;
+    background-color: hsl(0, 0%, 100%);
+
+}
+
+.card4 p {
+    color: rgba(78, 71, 71, 0.611);
+}
+
+.card4 > p {
+    color: black;
+
+}
+
+.card4 p.bold {
+    color: black;
+}
+
+.card4 p.qoute {
+    color: rgba(78, 71, 71, 0.611);
+}
+
+
+.card5 {
+    grid-column: 2/4;
+    background-color: hsl(219, 29%, 14%);
+}
+
+
+@media screen and (max-width:768px) {
+    
+    .container {
+        margin: 30px auto;
+    }
+    
+    .grid {
+        display: flex;
+        flex-flow: column;
+        row-gap: 20px;
+        margin: 0 40px;
+    }
+    
+    .card1 {
+        order: 0;
+    }
+    
+    .card2 {
+        order: 1;
+
+    }
+    
+    .card3 {
+        order: 5;
+
+    }
+
+    .card4 {
+        order: 3;
+
+    }
+
+    .card5 {
+        order: 4;
+
+    }
+
+}
